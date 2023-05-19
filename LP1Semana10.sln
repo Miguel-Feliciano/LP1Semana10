@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayerManager3", "PlayerManager3\PlayerManager3.csproj", "{8705423C-3203-4FED-9F07-5CCDE612419A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayerManager4", "PlayerManager4\PlayerManager4.csproj", "{DBC97E80-A95A-4964-A878-EC61056CC734}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{8705423C-3203-4FED-9F07-5CCDE612419A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8705423C-3203-4FED-9F07-5CCDE612419A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8705423C-3203-4FED-9F07-5CCDE612419A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBC97E80-A95A-4964-A878-EC61056CC734}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBC97E80-A95A-4964-A878-EC61056CC734}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBC97E80-A95A-4964-A878-EC61056CC734}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBC97E80-A95A-4964-A878-EC61056CC734}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
