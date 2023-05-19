@@ -1,10 +1,12 @@
+using System;
+
 namespace LootSort
 {
     /// <summary>
-    /// The Loot class should implement IComparable<Loot>
+    /// It implements IComparable<Loot>
     /// and override GetHashCode() and Equals()
     /// </summary>
-    public class Loot
+    public class Loot : IComparable<Loot>
     {
         /// <summary>Type of loot.</summary>
         public LootType Kind { get; }
@@ -36,5 +38,30 @@ namespace LootSort
         /// </returns>
         public override string ToString() =>
             $"[{Kind,15}]\t{Value:f2}\t{Description}";
+
+        /// <summary>
+        /// Compare loot based on type, value, and description
+        /// Compare loot type in alphabetical order
+        /// Compare loot value from most valuable to least valuable
+        /// Compare loot description in alphabetical order
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
+        public int CompareTo(Loot other)
+        {
+            if (other == null)
+                return 1;
+
+            int typeComparison = Kind.ToString().CompareTo(other.Kind.ToString());
+            if (typeComparison != 0)
+                return typeComparison;
+
+            int valueComparison = other.Value.CompareTo(Value);
+            if (valueComparison != 0)
+                return valueComparison;
+
+            return String.Compare(Description, other.Description, StringComparison.Ordinal);
+        }
+
     }
 }
