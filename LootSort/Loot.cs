@@ -77,6 +77,20 @@ namespace LootSort
                 return hash;
             }
         }
-        
+        /// <summary>
+        /// Check if loot instances are equal based on type, description, and value
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+                return false;
+
+            Loot other = (Loot)obj;
+            return Kind == other.Kind &&
+                   Description == other.Description &&
+                   Value == other.Value;
+        }
     }
 }
