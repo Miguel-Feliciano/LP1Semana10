@@ -62,6 +62,21 @@ namespace LootSort
 
             return String.Compare(Description, other.Description, StringComparison.Ordinal);
         }
-
+        /// <summary>
+        /// Combine hash codes of loot type, description, and value
+        /// </summary>
+        /// <returns></returns>
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                int hash = 17;
+                hash = hash * 23 + Kind.GetHashCode();
+                hash = hash * 23 + Description.GetHashCode();
+                hash = hash * 23 + Value.GetHashCode();
+                return hash;
+            }
+        }
+        
     }
 }
